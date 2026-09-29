@@ -36,6 +36,6 @@ public class ViewUserActivity extends AppCompatActivity {
     tv_hobby.setText("Sở thích: " + user.getHobby());
 
     Handler mainHandler = new Handler(Looper.getMainLooper());
-    Downloader.downloadWithProgress(user.getAvatar_url(), mainHandler, getBaseContext(), getCacheDir(), progressBar, iv_detail);
+    DownloadWithProgress.downloadWithProgress(user.getAvatar_url(), mainHandler, getBaseContext(), getCacheDir(), progressBar, iv_detail);
   }
 }

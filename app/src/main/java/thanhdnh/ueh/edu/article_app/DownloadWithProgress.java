@@ -22,7 +22,7 @@ import okhttp3.Response;
 import okio.BufferedSink;
 import okio.Okio;
 
-public class Downloader {
+public class DownloadWithProgress {
   public static String cached_file_path = "";
 
   public static File downloadFile(String url, File cached) {

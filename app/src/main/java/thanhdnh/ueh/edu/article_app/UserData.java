@@ -33,7 +33,7 @@ public class UserData {
 
   public void loadData(String url, Activity activity) {
     executor.execute(() -> {
-      File file = Downloader.downloadFile(url, context.getCacheDir());
+      File file = DownloadWithProgress.downloadFile(url, context.getCacheDir());
       if (file != null)
         activity.runOnUiThread(() -> {
           Gson gson = new Gson();
